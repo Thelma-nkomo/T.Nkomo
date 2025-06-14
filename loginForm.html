@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Title</title>
+        <body>
+            <p>Welcome. Please log in</p>
+            
+            <form>
+                <label for="unsernameInput">Username:</label>
+                <input type="text" id="usernameInput"/><br/>
+                
+                <label for="passwordInput">Password:</label>
+                <input type="password" id="passwordInput"/>
+                
+                <p id="message"></p>
+                <br/><br/>
+                <a href="#" onclick="verifyUser()">Log in</a>
+            </form>
+            
+            <script>
+                function verifyUser() {
+            var username = document.getElementById("usernameInput").value;
+            var password = document.getElementById("passwordInput").value;
+            checkUserCreds(username, password);
+        }
+
+        function checkUserCreds(username, password) {
+            var systemUsername = "Bond";
+            var systemPassword = "007";
+
+            if (username === systemUsername && password === systemPassword) {
+                document.getElementById("message").innerHTML = "Correct. Logging you in…";
+            } else {
+                document.getElementById("message").innerHTML = "Username or password is incorrect";
+                    }
+                }
+             
+            </script>
+        
+        </body>
+    </head>
+    <body></body>
+</html>
